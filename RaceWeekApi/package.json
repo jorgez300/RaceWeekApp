@@ -19,7 +19,7 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "docker:clean": "docker stop raceweekapi && docker rm raceweekapi && docker rmi raceweekapi",
-    "docker:build": "docker stop raceweekapi && docker rm raceweekapi && docker rmi raceweekapi && docker build -t raceweekapi . && docker run --name raceweekapi -p 21001:3000 raceweekapi",
+    "docker:build": "docker build -t raceweekapi . && docker run --name raceweekapi -p 21001:3000 raceweekapi",
     "docker:run": "docker start raceweekapi"
   },
   "dependencies": {
@@ -27,6 +27,7 @@
     "@nestjs/core": "^11.0.1",
     "@nestjs/platform-express": "^11.0.1",
     "@nestjs/swagger": "^11.2.0",
+    "@prisma/client": "^6.9.0",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
   },
