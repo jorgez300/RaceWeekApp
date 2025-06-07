@@ -18,9 +18,9 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "docker:clean": "docker stop raceweekapi && docker rm raceweekapi && docker rmi raceweekapi",
-    "docker:build": "docker build -t raceweekapi . && docker run --name raceweekapi -p 21001:3000 raceweekapi",
-    "docker:run": "docker start raceweekapi"
+    "docker:clean": "docker stop RaceWeekApi && docker rm RaceWeekApi && docker rmi raceweekapi-image",
+    "docker:build": "docker build -t raceweekapi-image . && docker run --name RaceWeekApi -p 21001:3000 raceweekapi-image",
+    "docker:run": "docker start RaceWeekApi"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
